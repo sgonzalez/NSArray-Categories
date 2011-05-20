@@ -36,7 +36,7 @@
 @implementation NSArray (NSArray_Random)
 
 - (id)randomObject {
-	
+	return [self objectAtIndex:[self randomIndex]];
 }
 
 - (int)randomIndex {
@@ -44,7 +44,17 @@
 }
 
 - (void)shuffle {
-	
+	NSMutableArray *tmp = [NSMutableArray arrayWithArray:self];
+	for (int i=[tmp count]-1; i>0; i--) {
+		[tmp exchangeObjectAtIndex: arc4random() % (i+1) withObjectAtIndex: i];
+	}
+	self = [NSArray arrayWithArray:tmp];
+}
+
+- (NSArray *)shuffledArray {
+	NSArray *shuffledArray = [NSArray arrayWithArray:self];
+	[shuffledArray shuffle];
+	return shuffledArray;
 }
 
 @end

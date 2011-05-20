@@ -37,4 +37,5 @@
 - (id)randomObject;
 - (int)randomIndex;
 - (void)shuffle;
+- (NSArray *)shuffledArray;
 @end

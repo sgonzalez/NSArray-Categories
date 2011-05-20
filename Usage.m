@@ -1,21 +1,17 @@
-#import "UIImage+Thumbnail.h"
-#import "UIImage+Alpha.h"
-#import "UIImage+RoundedCorner.h"
+#import "NSArray+Random.h"
 
 
-//Image that will be disected! :-)
-UIImage *prettyImage = [UIImage imageNamed:@"MyImage.png"];
+//The array that stuff will be done upon
+NSArray *foo = [NSArray arrayWithObjects:@"This",@"is",@"a",@"test",nil];
 
-//Create a 100x100 thumbnail of it
-UIImage *thumbnailOfImage = [prettyImage thumbnail];
+//Get a random index
+int *randy = [foo randomIndex];
 
-//Create a 250x250 thumbnail of it
-UIImage *sizedThumbnailOfImage = [prettyImage thumbnailWithWidth:250 height:250];
+//Get a random object
+NSString *myObject = (NSString *)[foo randomObject]; //Use any NSObject*, not just NSString (you should probably know this)
 
-//Check if an image has alpha
-if ([prettyImage hasAlpha]) {
-	//Do something cool here!
-}
+//Make a separate array that is shuffle
+NSArray *bar = [foo shuffledArray];
 
-//Create an image with rounded corners
-UIImage *roundedImage = [prettyImage roundedCornerImage:30 borderSize:0];
+//Shuffle the foo array
+[foo shuffle];

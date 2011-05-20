@@ -1,4 +1,4 @@
-So far only only one category on NSArray that has a method to pick a random object from the array and a method to shuffle the array using the Fisher-Yates shuffling algorithm.
+So far only only one category on NSArray that has a method to pick a random object from the array, a method that returns a random array index, and a method to shuffle the array using the Fisher-Yates shuffling algorithm.
 
 Usage.m is a file showing the usage of this category, this is NOT a proper category implementation.
 
