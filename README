@@ -1,5 +1,7 @@
 So far only only one category on NSArray that has a method to pick a random object from the array, a method that returns a random array index, and a method to shuffle the array using the Fisher-Yates shuffling algorithm.
 
+This could potentially be used for random table view, random cover flow view, a random image, or basically anything else that involves arrays and random awesomeness!
+
 Usage.m is a file showing the usage of this category, this is NOT a proper category implementation.
 
 There is no attribution required but is greatly appreciated!
